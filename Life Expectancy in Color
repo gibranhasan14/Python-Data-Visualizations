@@ -27,4 +27,7 @@ plot.diamond(x='Population', y='Life_expectancy', source=country_data, size=10,
              color=dict(field='Continent', transform=color_mapper),
              legend='Continent')
 
+plot.legend.location = 'bottom_right'
+plot.legend.background_fill_color = 'lightgrey'
+
 show(plot)
