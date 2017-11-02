@@ -24,6 +24,7 @@ color_mapper = CategoricalColorMapper(factors=['Asia', 'Africa', 'Antartica',
 plot = figure(x_axis_label='Population', y_axis_label='Life Expectancy')
 
 plot.diamond(x='Population', y='Life_expectancy', source=country_data, size=10,
-             color=dict(field='Continent', transform=color_mapper))
+             color=dict(field='Continent', transform=color_mapper),
+             legend='Continent')
 
 show(plot)
