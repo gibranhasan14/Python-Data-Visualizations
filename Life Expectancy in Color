@@ -26,6 +26,12 @@ plot = figure(x_axis_label='Population', y_axis_label='Life Expectancy')
 plot.diamond(x='Population', y='Life_expectancy', source=country_data, size=10,
              color=dict(field='Continent', transform=color_mapper),
              legend='Continent')
+             
+hover = plot.select_one(HoverTool)
+hover.tooltips = [('Country Name English', '@Country_English'),
+                  ('Population', '@Population'),
+                  ('Life Expectancy (years)', '@Life_expectancy')]
+
 
 plot.legend.location = 'bottom_right'
 plot.legend.background_fill_color = 'lightgrey'
